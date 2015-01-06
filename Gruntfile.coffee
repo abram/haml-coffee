@@ -57,8 +57,6 @@ module.exports = (grunt) ->
       dist:
         files:
           'dist/compiler/hamlcoffee.js': ['src/haml-coffee.coffee', 'src/hamlc.coffee'],
-        options:
-          transform: ['coffeeify']
 
   grunt.registerTask 'watch', [
     'regarde'
