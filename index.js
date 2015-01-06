@@ -4,4 +4,4 @@ if (typeof(CoffeeScript.register) == 'function') {
   CoffeeScript.register();
 }
 
-module.exports = require('./src/hamlc');
+module.exports = require('./src/hamlc.coffee');
