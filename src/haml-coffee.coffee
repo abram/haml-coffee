@@ -1,13 +1,12 @@
-Node      = require('./nodes/node')
-Text      = require('./nodes/text')
-Haml      = require('./nodes/haml')
-Code      = require('./nodes/code')
-Comment   = require('./nodes/comment')
-Filter    = require('./nodes/filter')
-Directive = require('./nodes/directive')
+Node      = require('./nodes/node.coffee')
+Text      = require('./nodes/text.coffee')
+Haml      = require('./nodes/haml.coffee')
+Code      = require('./nodes/code.coffee')
+Comment   = require('./nodes/comment.coffee')
+Filter    = require('./nodes/filter.coffee')
+Directive = require('./nodes/directive.coffee')
 
-{whitespace} = require('./util/text')
-{indent}     = require('./util/text')
+{whitespace, indent} = require('./util/text.coffee')
 
 # The HamlCoffee class is the compiler that parses the source code and creates an syntax tree.
 # In a second step the created tree can be rendered into either a JavaScript function or a

@@ -1,4 +1,4 @@
-{escapeHTML} = require('../util/text')
+{escapeHTML} = require('../util/text.coffee')
 
 # Base class for the syntax tree.
 #

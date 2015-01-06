@@ -53,18 +53,12 @@ module.exports = (grunt) ->
       publish:
         command: "npm publish"
 
-  # Use a custom task for using the latest v1 version of Browserify,
-  # since I don't like the current contraints in v2 like the need to
-  # have the `.coffee` extension within the require and that all paths
-  # are absolute.
-  #
-  grunt.registerTask 'browserify', 'Create the browser distribution', ->
-    browserify = require('browserify')()
-    browserify.ignore '../package.json'
-    browserify.ignore 'coffee-script'
-    browserify.require "#{ __dirname }/src/haml-coffee.coffee"
-    browserify.require "#{ __dirname }/src/hamlc.coffee"
-    grunt.file.write 'dist/compiler/hamlcoffee.js', browserify.bundle()
+    browserify:
+      dist:
+        files:
+          'dist/compiler/hamlcoffee.js': ['src/haml-coffee.coffee', 'src/hamlc.coffee'],
+        options:
+          transform: ['coffeeify']
 
   grunt.registerTask 'watch', [
     'regarde'

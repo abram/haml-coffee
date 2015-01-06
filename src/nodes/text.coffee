@@ -1,6 +1,6 @@
-Node  = require('./node')
+Node  = require('./node.coffee')
 
-{escapeQuotes} = require('../util/text')
+{escapeQuotes} = require('../util/text.coffee')
 
 # Text node that contains everything that cannot be detected as
 # other node. This is normally plain text to be inserted into the

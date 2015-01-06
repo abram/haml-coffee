@@ -1,6 +1,6 @@
 fs = require 'fs'
 
-Compiler = require './haml-coffee'
+Compiler = require './haml-coffee.coffee'
 
 if process.browser
   CoffeeScript = window.CoffeeScript

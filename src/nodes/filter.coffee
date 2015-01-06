@@ -1,7 +1,6 @@
-Node = require('./node')
+Node = require('./node.coffee')
 
-{whitespace}    = require('../util/text')
-{unescapeQuotes} = require('../util/text')
+{whitespace, unescapeQuotes}    = require('../util/text.coffee')
 
 # Filter node for built-in Haml filters:
 #

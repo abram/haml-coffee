@@ -1,6 +1,6 @@
-Node  = require('./node')
+Node  = require('./node.coffee')
 
-{escapeQuotes} = require('../util/text')
+{escapeQuotes} = require('../util/text.coffee')
 
 # HAML node that contains Haml a haml tag that can have attributes
 # and a text or code assignment. There are shortcuts for id and class

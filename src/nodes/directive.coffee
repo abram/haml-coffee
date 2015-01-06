@@ -1,5 +1,5 @@
 path = require('path')
-Node = require('./node')
+Node = require('./node.coffee')
 
 unless process.browser
   fs = require('fs')
@@ -52,7 +52,7 @@ module.exports = class Directive extends Node
               console.error error
 
             # Compile and build the source function.
-            Compiler = require '../haml-coffee'
+            Compiler = require '../haml-coffee.coffee'
             compiler = new Compiler(@options)
             compiler.parse source
             code = CoffeeScript.compile(compiler.precompile(), bare: true)

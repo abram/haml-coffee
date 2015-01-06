@@ -1,4 +1,4 @@
-Node  = require('./node')
+Node  = require('./node.coffee')
 
 # Code node that represent lines of CoffeeScript code
 # in the Haml template.
@@ -20,7 +20,7 @@ module.exports = class Code extends Node
     codeBlock  = @expression.match(/(-|!=|\&=|=|~)\s?(.*)?/)
     identifier = codeBlock[1]
     code       = codeBlock[2]
-   
+
     # Code block without output
     if identifier is '-'
       @opener = @markRunningCode(code)

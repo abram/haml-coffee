@@ -1,5 +1,5 @@
-Node  = require('./node')
-{escapeQuotes} = require('../util/text')
+Node  = require('./node.coffee')
+{escapeQuotes} = require('../util/text.coffee')
 
 # Comment node for silent code blocks or pure
 # Haml comments.
