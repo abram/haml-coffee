@@ -1,7 +1,3 @@
-CoffeeScript = require('coffee-script');
-
-if (typeof(CoffeeScript.register) == 'function') {
-  CoffeeScript.register();
-}
+require('coffee-script/register');
 
 module.exports = require('./src/hamlc.coffee');

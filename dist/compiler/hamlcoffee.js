@@ -6777,7 +6777,9 @@ module.exports={
       "url": "http://github.com/netzpirat/haml-coffee/raw/master/LICENSE"
     }
   ],
-  "browserify": "./src/haml-coffee",
+  "browserify": {
+    "transform": ["coffeeify"]
+  },
   "engines": {
     "node": ">=0.4.0"
   },
